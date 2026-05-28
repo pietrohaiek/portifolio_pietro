@@ -1,0 +1,230 @@
+/* CONFIGURAÇÕES GERAIS
+*/
+
+* {
+    /* Define que padding e border não aumentam o tamanho total do elemento */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Define a fonte principal e a cor do texto para melhor leitura */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #faf8f8;
+    background-color: #363536;
+    /* Suaviza a rolagem para links âncoras */
+    scroll-behavior: smooth;
+    font-weight: 600;
+}
+
+/* UTILITÁRIOS
+*/
+
+.container {
+    /* Centraliza o conteúdo e limita a largura máxima */
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-padding {
+    /* Cria espaçamento interno vertical entre as seções */
+    padding: 60px 0;
+}
+
+.section-bg {
+    /* Cor de fundo alternada para destacar seções */
+    background-color: #1f1e1e;
+}
+
+.clear {
+    clear: both;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: #fbfbfb;
+}
+.container h2{
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
+
+header {
+    background-color: #201f1f;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #ffffff;
+    font-weight: bold;
+    
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 70px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #2f2d30;
+}
+#projetos .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0%;
+}
+
+/* PROJETOS (PORTFÓLIO)
+*/
+
+.projeto-card {
+    width: 23%;
+     margin: 1%;
+    background: #202020;
+    padding: 15px;
+    border: 1px solid #ddd;
+    /* Faz os elementos flutuarem para ficarem lado a lado */
+     float: left;
+    text-align: center;
+}
+
+.projeto-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.projeto-card:hover {
+    transform: translateY (-5px);
+    background-color: #103d77;
+
+}
+/* CREDIBILIDADE (CLIENTES)
+*/
+
+.cliente-logo {
+    width: 23%;
+    margin: 1%;
+    padding: 30px;
+    background: #1b1b1b;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    color: #fcffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(red, green, blue, alpha);
+    transition: 0,3;
+}
+.cliente-logo:hover {
+    transform: translateY(-5px)
+}
+
+/* CONTATO
+*/
+
+.contato-info {
+    width: 48%;
+    float: left;
+}
+
+.contato-form {
+    width: 48%;
+    float: right;
+}
+
+.contato-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contato-form input,
+.contato-form textarea {
+    /* Ocupa toda a largura do container pai */
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+.contato-form button {
+    /* Botão de destaque */
+    background-color: #4d4c4d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contato-form button:hover {
+    background-color: #103d77;
+}
+
+/* FOOTER
+*/
+
+footer {
+    background-color: #222121;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* RESPONSIVIDADE (@media queries)
+*/
+
+/* Tablets e telas médias */
+@media (max-width: 768px) {
+    .projeto-card, .cliente-logo {
+        /* Muda para 2 colunas */
+        width: 48%;
+    }
+
+    .contato-info, .contato-form {
+        /* Empilha os elementos de contato */
+        width: 100%;
+        float: none;
+        margin-bottom: 30px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .projeto-card, .cliente-logo {
+        /* Muda para 1 coluna (100% de largura) */
+        width: 98%;
+        margin: 1% auto;
+        float: none;
+    }
+
+    nav ul li {
+        /* Empilha os itens do menu no mobile */
+        display: block;
+        margin: 10px 0;
+    }
+}
